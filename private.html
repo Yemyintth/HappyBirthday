@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="private.css" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html" class="romantic-back-button">← Back</a>
+
+  <div id="typedtext"></div>
+
+    <div class="mail-container">
+        <div id="mail-icon" class="mail-icon" onclick="openMail()">💌</div>
+
+        <div id="love-card" class="custom-card hidden">
+            <div class="custom-card-body">
+            <h2 class="custom-card-title">Wishes To My Dearest San La Won 💖</h2>
+            <h4 class="custom-card-subtitle">Happy Birthday, pr MaMa!</h4>
+            <p class="custom-card-text">
+                Happy Birthday ပါ မမ။မမ မွေးနေ့က စပြီးလိုချင်တာတွေ ဖြစ်ချင်တာတွေနဲ့ ပျော်ရွှင်ပြီးပြည့်စုံပါစေဗျ။မမနဲ့လဲ နောင်နှစ်တွေအများကြီး တူတူရှိသွားချင်ပါတယ်။ချစ်တယ်ဗျ မမ။💕
+            </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-row">
+    <button onclick="showCard('bouquote')">💐 Bouquote</button>
+    <button onclick="showCard('game')">🎮 Game</button>
+    </div>
+
+    <div id="bouquote-card" class="custom-card hidden">
+    <div class="custom-card-body">
+        <h2 class="custom-card-title">A Flower For You 🌸</h2>
+        <div class="bouquet">
+        <div class="flower f1"></div>
+        <div class="flower f2"></div>
+        <div class="flower f3"></div>
+        <div class="flower f4"></div>
+        <div class="flower f5"></div>
+        <div class="stem"></div>
+        <div class="leaf leaf1"></div>
+        <div class="leaf leaf2"></div>
+        <div class="wrap"></div>
+        </div>
+        <p class="custom-card-text">
+        If I had a flower for every time I thought of you, I could walk in my garden forever.
+        </p>
+    </div>
+    </div>
+
+    <div id="game-card" class="custom-card hidden">
+    <div class="custom-card-body">
+        <h2 class="custom-card-title">Birthday Love Game 🎉</h2>
+        <div class="love-counter">
+            <div class="hearts">
+                <div class="heart">❤️</div>
+                <div class="heart">❤️</div>
+            </div>
+
+            <div class="count-row">
+                <div class="count-block">
+                <div class="label">You 💖</div>
+                <div class="count" id="youCount">0</div>
+                <div class="button-pair">
+                    <button onclick="addLove('you')">Add 💖</button>
+                    <button onclick="removeLove('you')">Minus 💔</button>
+                </div>
+                </div>
+
+                <div class="count-block">
+                <div class="label">Me 💖</div>
+                <div class="count" id="meCount">0</div>
+                <div class="button-pair">
+                    <button onclick="addLove('me')">Add 💖</button>
+                    <button onclick="removeLove('me')">Minus 💔</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        <p class="custom-card-text">
+        Guess how much I love you? 💖 A little? A lot? Nope — to the moon and back, forever and always!
+        </p>
+    </div>
+    </div>
+
+
+  
+
+  <footer>
+  <p style="font-family: 'Great Vibes', cursive; font-size: 1.8em; color:rgb(244, 242, 242);">
+    Made with 💕 by someone who love you
+  </p>
+  <img src="images/banner.png" alt="Banner" class="footer-banner" />
+  </footer>
+<script src="private.js"></script>
+</body>
+</html>

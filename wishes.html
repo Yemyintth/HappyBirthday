@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <div id="typedtext"></div>
+  
+  <button onclick="location.href='index.html'" style="margin-bottom: 20px; background:#ff6f91;">🎉 Back</button>
+  <section class="wish-card-card">
+    <h2>Wishes for San La Won</h2>
+    <form id="wishForm" aria-label="Send birthday wish">
+      <input type="text" id="userName" placeholder="Your name" maxlength="50" required autocomplete="off" />
+      <textarea id="wishInput" placeholder="Write your romantic birthday wish for San La Won..." maxlength="3000" required></textarea>
+      <button type="submit">💌 Send Your Wish</button>
+    </form>
+  </section>
+
+  <div id="messages" aria-live="polite" aria-atomic="true"></div>
+  <button id="adminBtn" style="margin-bottom: 20px; margin-top: 20px; background:#802239;">🔒 Admin</button>
+  <button id="logoutBtn" style="margin-bottom: 20px; margin-top: 20px; background:#aaa; display: none;">🔓 Exit Admin</button>
+
+<footer class="footer">
+  <p style="font-family: 'Great Vibes', cursive; font-size: 1.8em; color: #c72c41;">
+    Made with love for San La Won 💗
+  </p>
+  <img src="images/banner.png" alt="Banner" class="footer-banner" />
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #fff0f5, #ffeaf1);
+  text-align: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  text-align: center;
+  background: linear-gradient(45deg, #c72c41, #ff6f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 6px rgba(199, 44, 65, 0.4);
+  margin: 0px;
+}
+
+/* 💖 Romantic Back Button with updated style */
+#backBtn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(45deg, #ff6f91, #ffb3c1);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 1em;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateX(-30px);
+  animation: slideInLeft 1s forwards ease-in-out, floatY 3s ease-in-out infinite 2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#backBtn:hover {
+  background: linear-gradient(45deg, #ff4d6d, #ffa8b6);
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(255, 111, 145, 0.5);
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes floatY {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* 🎂 Transparent Cake Container Box */
+.cakeBox {
+  background: rgba(255, 255, 255, 0.0);
+  border-radius: 20px;
+  padding: 30px 20px;
+  box-shadow: 0 8px 30px rgba(255, 192, 203, 0.1);
+  max-width: 350px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🍰 Main Cake */
+#mainCake {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  border-radius: 20px;
+  opacity: 0.65;
+  transform: scale(0.85);
+  animation: fadeInZoom 1.5s forwards ease;
+  transition: box-shadow 0.4s ease, transform 0.4s ease, opacity 0.4s ease;
+  filter: drop-shadow(0 0 12px rgba(255, 182, 193, 0.5));
+  margin-bottom: 20px;
+}
+
+#mainCake:hover {
+  opacity: 0.9;
+  transform: scale(0.9);
+  filter: drop-shadow(0 0 16px rgba(255, 111, 145, 0.6));
+}
+
+@keyframes fadeInZoom {
+  to {
+    opacity: 0.85;
+    transform: scale(1);
+  }
+}
+
+/* 🍰 Slice Button with updated style */
+#sliceBtn {
+  background: linear-gradient(45deg, #ff6f91, #ffb3c1);
+  color: white;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: bounceIn 1.2s ease;
+  margin-top: 10px;
+  font-family: 'Arial', sans-serif;
+}
+
+#sliceBtn:hover {
+  background: linear-gradient(45deg, #ff4d6d, #ffa8b6);
+  transform: scale(1.05);
+  box-shadow: 0 8px 18px rgba(255, 111, 145, 0.5);
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 🍰 Cake Slices */
+#slicesContainer {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+}
+
+.slice {
+  width: 90px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  animation: popIn 0.5s ease;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.5) rotate(-10deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 500px) {
+  #backBtn {
+    font-size: 0.85em;
+    padding: 8px 14px;
+  }
+
+  #sliceBtn {
+    font-size: 1em;
+    padding: 10px 16px;
+  }
+
+  .slice {
+    width: 65px;
+  }
+
+  .cakeBox {
+    margin-top: 100px;
+  }
+}
+
+.drinkBox {
+  margin-top: 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(199, 44, 65, 0.15);
+  border: 3px dashed #ffc1cc;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+}
+
+.drinkBox h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #c72c41;
+  margin-bottom: 20px;
+}
+
+.drinkBox img {
+  width: 200px;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: 0 5px 15px rgba(255, 182, 193, 0.3);
+}
+
+.drink-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.love-button {
+  background: linear-gradient(45deg, #ff6f91, #ffb3c1);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background 0.3s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.love-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff4d6d, #ffa8b6);
+}
+
+.rowBox {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  flex-direction: row; /* 🖥️ Horizontal on PC */
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+/* 📱 Mobile: Switch to vertical stacking */
+@media (max-width: 768px) {
+  .rowBox {
+    flex-direction: column; /* 📱 Vertical on mobile */
+    align-items: center;
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-banner {
+  width: 250px; /* or any size you want, like 300px or 80% */
+  height: auto; /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* centers it */
+  object-fit: contain;
+}

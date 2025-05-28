@@ -1,0 +1,194 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #ffe4ec, #ffccd5, #ffd6e8);
+  padding: 40px 20px;
+  max-width: 700px;
+  margin: auto;
+  color: #5a2a2a;
+}
+
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  text-align: center;
+  background: linear-gradient(45deg, #c72c41, #ff6f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 6px rgba(199,44,65,0.4);
+}
+
+.wish-card-card {
+  background: white;
+  border-radius: 30px;
+  padding: 40px;
+  box-shadow: 0 15px 40px rgba(199,44,65,0.25);
+  margin-bottom: 40px;
+  border: 3px dashed #ffc1cc;
+  position: relative;
+}
+
+.wish-card-card::before {
+  content: "💖";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+}
+
+.wish-card-card h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8em;
+  text-align: center;
+  color: #c72c41;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 7px #ffeff3;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+input, textarea {
+  padding: 14px;
+  border-radius: 20px;
+  border: 2px solid #ff9aab;
+  font-size: 1.1em;
+  font-family: 'Montserrat', sans-serif;
+  resize: vertical;
+  background: #fff0f5;
+  transition: border 0.3s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff6f91;
+  background: #fff5f9;
+}
+
+input {
+  height: 50px;
+}
+
+button {
+  position: relative;
+  background: linear-gradient(45deg, #ff6f91, #ffb3c1);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  font-family: 'Arial', sans-serif;
+  overflow: hidden;
+  z-index: 0;
+}
+
+button::before,
+button::after {
+  content: "";
+  position: absolute;
+  border-radius: 25px;
+  inset: 0;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+
+button::before {
+  background: rgba(255, 255, 255, 0.15);
+  filter: blur(6px);
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+button::after {
+  background: rgba(255, 111, 145, 0.3);
+  opacity: 0;
+  transform: scale(1);
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff4d6d, #ffa8b6);
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(255, 77, 109, 0.7);
+}
+
+button:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+button:hover::after {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.wish-card {
+  background: linear-gradient(145deg, #fff0f5, #ffeaf1);
+  border-radius: 25px;
+  padding: 25px 30px;
+  box-shadow: 0 10px 25px rgba(199,44,65,0.15);
+  color: #802239;
+  font-style: italic;
+  font-size: 1.15em;
+  line-height: 1.6;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s forwards;
+}
+
+.wish-card::before {
+  content: "💕";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  font-size: 1.5em;
+}
+
+.wish-card .user {
+  font-weight: 700;
+  font-style: normal;
+  text-align: right;
+  font-size: 1em;
+  color: #c72c41;
+  margin-top: 15px;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-banner {
+  width: 250px; /* or any size you want, like 300px or 80% */
+  height: auto; /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* centers it */
+  object-fit: contain;
+}
+
+

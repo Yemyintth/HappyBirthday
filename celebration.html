@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="celebration.css" />
+</head>
+<body>
+
+  <button id="backBtn" onclick="goBack()">← Back</button>
+  <br>
+  </br>
+  
+  <div class="rowBox">
+    
+    <div class="cakeBox">
+      <h2>Birthday Cake</h2>
+      <img id="mainCake" src="your-cake-image.png" alt="Birthday Cake" />
+      <button id="sliceBtn">🍰 Slice Cake For Each of You.</button>
+    </div>
+
+    <div class="drinkBox">
+      <h2>Drinks</h2>
+      <img id="drinkImage" src="images/choose.png" alt="Choose your juice" />
+      <div class="drink-buttons">
+        <button class="love-button" onclick="selectDrink('coffee')">Coffee</button>
+        <button class="love-button" onclick="selectDrink('orange')">Orange Juice</button>
+        <button class="love-button" onclick="selectDrink('milk')">Milk</button>
+        <button class="love-button" onclick="selectDrink('cola')">Coca-Cola</button>
+      </div>
+    </div>
+  </div>
+  <div id="slicesContainer"></div>
+
+  <footer>
+  <img src="images/banner.png" alt="Banner" class="footer-banner" />
+  </footer>
+
+  <script src="celebration.js"></script>
+</body>
+</html>

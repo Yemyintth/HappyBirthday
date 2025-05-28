@@ -1,0 +1,155 @@
+/* Reset and layout base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffe0e9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Gradient headline with romantic font */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  text-align: center;
+  background: linear-gradient(45deg, #c72c41, #ff6f91);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 6px rgba(199, 44, 65, 0.4);
+  margin: 0px;
+  line-height: 1.2;
+}
+
+/* Typewriter container */
+#typedtext {
+  margin-top: 50px;
+  /* Allows footer to stay at bottom if content is short */
+}
+
+.balloons-buttons-row {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 10px;
+}
+
+/* Balloons absolutely pinned to the far left */
+.balloons {
+  position: absolute;
+  margin-right: 750px;
+  width: 200px;
+  height: auto;
+}
+
+/* Buttons group centered in page */
+.button-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  z-index: 1; /* ensure buttons sit above the balloon if needed */
+}
+
+/* Button styling (already shared, include if not added) */
+.love-button {
+  background: linear-gradient(45deg, #ff6f91, #ffb3c1);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  font-family: 'Arial', sans-serif;
+}
+
+.love-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(45deg, #ff4d6d, #ffa8b6);
+}
+
+/* Countdown container styling */
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 30px;
+  box-shadow: 0 10px 25px rgba(199, 44, 65, 0.15);
+  border: 3px dashed #ffc1cc;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Digital countdown clock text */
+#countdown {
+  font-size: 2.5em;
+  color: #c72c41;
+  font-weight: bold;
+  font-family: 'Courier New', monospace;
+  text-align: center;
+}
+
+/* Birthday message appearance */
+#birthdayMessage {
+  font-size: 2.2em;
+  color: #ff4f7b;
+  font-weight: bold;
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Fade-in animation reused from your theme */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+
+
+/* Message below typewriter text */
+.message {
+  text-align: center;
+  font-size: 1.5em;
+  margin: 20px 0;
+  color: #d6336c;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-banner {
+  width: 250px; /* or any size you want, like 300px or 80% */
+  height: auto; /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* centers it */
+  object-fit: contain;
+}

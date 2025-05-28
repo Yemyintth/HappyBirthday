@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="party.css">
+</head>
+<body>
+  <a href="index.html" class="back-button">← Back</a>
+  <h1>Party With Us</h1>
+
+  <div class="image-container" id="imageContainer">
+    <img src="images/party_one.webp" alt="Party" class="main-image" />
+    <div id="celebrationImages"></div> <!-- Same images as entries -->
+  </div>
+    <h1>Choose Your Character to Celebrate</h1>
+  <div class="image-box" id="imageBox">
+    <img src="images/beastboy.gif" alt="1" data-id="1">
+    <img src="images/raven.gif" alt="2" data-id="2">
+    <img src="images/robin.gif" alt="3" data-id="3">
+    <img src="images/starfire.gif" alt="4" data-id="4">
+  </div>
+
+  <div class="input-section">
+    <input type="text" id="nameInput" placeholder="Enter your name" />
+    <button onclick="celebrate()">Celebrate 🎉</button>
+  </div>
+
+  <button onclick="toggleAdminMode()" id="adminToggleBtn">Enter Admin Mode 🔐</button>
+
+  <footer>
+  <img src="images/banner.png" alt="Banner" class="footer-banner" />
+  </footer>
+
+  <script src="party.js"></script>
+</body>
+</html>

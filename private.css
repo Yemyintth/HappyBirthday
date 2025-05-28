@@ -1,0 +1,343 @@
+/* Reset and layout base */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #ffe0e9;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.romantic-back-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: linear-gradient(135deg, #ffc1cc, #ff99aa);
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-family: 'Great Vibes', cursive;
+  box-shadow: 0 8px 20px rgba(255, 105, 135, 0.4);
+  transition: all 0.35s ease;
+  z-index: 1000;
+  border: 2px solid #ffe4ec;
+}
+
+.romantic-back-button:hover {
+  background: linear-gradient(135deg, #ff6f91, #ff9a9e);
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 105, 135, 0.6);
+}
+
+
+/* Gradient headline with romantic font */
+h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 4em;
+  text-align: center;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 6px rgba(249, 247, 247, 0.4);
+  margin: 0px;
+  line-height: 1.2;
+}
+
+/* Typewriter container */
+#typedtext {
+  margin-top: 50px;
+  /* Allows footer to stay at bottom if content is short */
+}
+
+.mail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  position: relative;
+}
+
+.mail-icon {
+  font-size: 4rem;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+  animation: float 2s infinite ease-in-out;
+}
+
+.mail-icon:hover {
+  transform: scale(1.2);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.hidden {
+  display: none;
+}
+
+.custom-card {
+  width: 90%;
+  max-width: 500px;
+  background: linear-gradient(145deg, #fff0f5, #ffeaf1);
+  border-radius: 25px;
+  box-shadow: 0 12px 30px rgba(199, 44, 65, 0.15);
+  padding: 30px;
+  margin: 20px auto;
+  border: 3px dashed #ffc1cc;
+  animation: fadeIn 1s ease forwards;
+}
+
+.custom-card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5em;
+  color: #c72c41;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.custom-card-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  color: #9b4b6c;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.custom-card-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  color: #5a2a2a;
+  line-height: 1.6;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.button-row button {
+  background: linear-gradient(to right, #ff9a9e, #ff6f91);
+  color: white;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2em;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(255, 111, 145, 0.5);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.button-row button:hover {
+  background: #ff5e89;
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}
+
+.bouquet {
+  position: relative;
+  width: 120px;
+  height: 200px;
+  margin: 0 auto;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.flower {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  animation: bloom 2s ease-in-out infinite alternate;
+}
+
+@keyframes bloom {
+  from { transform: scale(0.95); }
+  to { transform: scale(1.1); }
+}
+
+/* All red flowers (rose shades) */
+.f1 {
+  top: 0; left: 40px;
+  background: radial-gradient(circle, #fc0568 30%, #f20505 80%);
+}
+.f2 {
+  top: 10px; left: 0;
+  background: radial-gradient(circle, #e10202 30%, #f00505 80%);
+}
+.f3 {
+  top: 10px; right: 0;
+  background: radial-gradient(circle, #fa0536 30%, #f10d0d 80%);
+}
+.f4 {
+  top: 40px; left: 20px;
+  background: radial-gradient(circle, #e60026 30%, #f51202 80%);
+}
+.f5 {
+  top: 40px; right: 20px;
+  background: radial-gradient(circle, #f50606 30%, #f80303 80%);
+}
+
+/* Stem */
+.stem {
+  position: absolute;
+  top: 70px;
+  left: 55px;
+  width: 10px;
+  height: 130px;
+  background: linear-gradient(to bottom, #228b22, #006400);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+/* Leaves */
+.leaf {
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: #228b22;
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.leaf1 {
+  top: 90px;
+  left: 40px;
+  transform: rotate(30deg);
+}
+
+.leaf2 {
+  top: 90px;
+  left: 60px;
+  transform: rotate(-30deg);
+}
+
+.wrap {
+  position: absolute;
+  top: 100px;
+  left: 25px;
+  width: 70px;
+  height: 100px;
+  background: rgba(15, 9, 10, 0.9);
+  clip-path: polygon(0 0, 100% 0, 50% 100%);
+  opacity: 2;
+  
+}
+
+.love-counter {
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.hearts {
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.count-row {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin: 30px 0;
+}
+
+.count-block {
+  text-align: center;
+}
+
+.label {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #c72c41;
+}
+
+.count {
+  font-size: 2.5em;
+  color: #c72c41;
+  margin: 10px 0;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #ffc0cb;
+}
+
+.button-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button-pair button {
+  background: linear-gradient(to right, #ff6f91, #ff9a9e);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(255, 111, 145, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.button-pair button:hover {
+  transform: scale(1.05);
+  background: #ff5e89;
+}
+
+/* Footer styling */
+footer {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+  font-size: 0.9em;
+}
+
+.footer {
+  margin-top: 10px;
+  text-align: center;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.footer-banner {
+  width: 250px; /* or any size you want, like 300px or 80% */
+  height: auto; /* keeps aspect ratio */
+  display: block;
+  margin: 0 auto; /* centers it */
+  object-fit: contain;
+}
